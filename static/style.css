@@ -1,0 +1,136 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #3b4ef8;
+}
+
+a:hover {
+  color: #6c7afa;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Krub", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+}
+
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background: #f6f7ff;
+  border-bottom: 2px solid #eceefe;
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+}
+
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+}
+
+#header .logo a {
+  color: #2d405f;
+}
+
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: white;
+  border-bottom: 2px solid white;
+  text-align: center;
+}
+
+#hero h1 {
+  margin: 0;
+  padding-top: 70px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #141d2b;
+  width: 60%;
+  color: #2d405f;
+}
+
+#hero h2 {
+  color: #466393;
+  margin: 15px 0 0 0;
+  font-size: 24px;
+  color: #2d405f;
+}
+#hero .hero-img {
+  max-width: 60%;
+  margin-top: 20px;
+}
+#hero .form{
+  padding-top: 10px;
+}
+#hero .form input {
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 0px 15px 2px 15px;
+  width: 580px;
+  height: 40px;
+  margin: 0 8px;
+}
+#hero .form input:focus{
+  border: black;
+}
+#hero .form button[type="submit"] {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 7px 30px;
+  border-radius: 3px;
+  transition: 0.5s;
+  margin: -5px;
+  border: 2px solid #3B4EF8;
+  color: #fff;
+  background: #3B4EF8;
+}
+
+.res{
+  margin-top: 10px;
+}
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}

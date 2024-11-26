@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Phishing Website Detection</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="static/assets/img/newlogo.jpg" rel="apple-touch-icon">
+
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="static/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-center"> <!-- Centered here -->
+
+      <h1 class="logo text-center"><a href="{{ url_for('home') }}">Phishing Website Detection</a></h1>
+
+    </div>
+  </header>
+
+
+  <section id="hero" class="d-flex justify-content-center align-items-center">
+
+    <div class="container d-flex flex-column align-items-center justify-content-center">
+      <img src="static/phising.webp" alt="Phishing Detection Image" class="img-fluid" style="width:500px;height: auto;">
+      <h1>FAKE WEBSITE DETECTION</h1>
+      <form action="/result" method="POST" role="form" class="form">
+        <div class="row no-gutters">
+          <div class="col-md-6 form-group pr-md-1">
+            <input type="url" name="name" class="form-control" id="name"
+              placeholder="Enter a URL link in format http or https" required>
+          </div>
+        </div>
+        <div class="text-center"><button type="submit">Scan URL</button></div>
+        {% if name %}
+        <b>
+          <p class="res" data-aos="fade-in" data-aos-delay="150">{{name[0]}}</p>
+        </b>
+
+        <h2 style="color: {% if 'not safe' in name[1].lower() %} red {% else %} green {% endif %};" data-aos="fade-in"
+          data-aos-delay="150">
+          Website is {{ name[1] }} to use
+        </h2><br>
+        {% endif %}
+
+
+      </form>
+    </div>
+
+  </section>
+
+
+  <script src="static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
+
+
+  <script src="static/assets/js/main.js"></script>
+
+</body>
+
+</html>
